@@ -1,0 +1,40 @@
+HELP.md
+/target/
+/logs/
+/dev/
+/test/
+/local/
+/prod/
+/uploadFiles/
+/iospem/
+/bin/
+/.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+*prod-debug.properties
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
