@@ -19,27 +19,27 @@ public class MqttConfiguration {
     //指定配置文件application-local.properties中的属性名前缀
     public static final String PREFIX = "ximo.mqtt";
     private String host;
-    private String clientid;
-    private String username;
+    private String clientId;
+    private String userName;
     private String password;
     private String topic;
     private int timeout;
-    private int keepalive;
+    private int keepAlive;
 
     public String getClientid() {
-        return clientid;
+        return clientId;
     }
 
     public void setClientid(String clientid) {
-        this.clientid = clientid;
+        this.clientId = clientid;
     }
 
     public String getUsername() {
-        return username;
+        return userName;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.userName = username;
     }
 
     public String getPassword() {
@@ -67,11 +67,11 @@ public class MqttConfiguration {
     }
 
     public int getKeepalive() {
-        return keepalive;
+        return keepAlive;
     }
 
     public void setKeepalive(int keepalive) {
-        this.keepalive = keepalive;
+        this.keepAlive = keepalive;
     }
 
     public String getHost() {
@@ -89,7 +89,7 @@ public class MqttConfiguration {
     @Bean
     public MqttPushClient getMqttPushClient() {
         //连接至mqtt服务器，获取mqtt连接
-        mqttPushClient.connect(host, clientid, username, password, timeout, keepalive);
+        mqttPushClient.connect(host, clientId, userName, password, timeout, keepAlive);
         //一连接mqtt,就订阅默认需要订阅的主题（如test_queue）
         new MqttSubClient(mqttPushClient);
         return mqttPushClient;

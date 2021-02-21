@@ -29,6 +29,7 @@ public class MqttDemoController {
     public void testPublishMessage() {
         mqttPushClient.publish("test_queue","这是一条测试消息");
     }
+
     @RequestMapping("testPublishMessage2")
     public void testPublishMessage2(String message){
         mqttPushClient.publish("test_queue",message);
