@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MqttSubClient {
 
-    public MqttSubClient(){
+    public MqttSubClient(MqttPushClient mqttPushClient){
         subScribeDataPublishTopic();
     }
 
